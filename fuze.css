@@ -1,2 +1,37 @@
-.w3-opacity,.w3-hover-opacity:hover{opacity:0.60;-webkit-backface-visibility:hidden}
-.w3-opacity-off,.w3-hover-opacity-off:hover{opacity:1;-webkit-backface-visibility:hidden}
+/*
+ * fuze.css
+ * Version: 0.1
+ * Author: Aiden Bai
+
+ * Made available under a MIT License:
+ * https://www.opensource.org/licenses/mit-license.php
+
+ * fuze.css Copyright Aiden Bai 2017.
+ */
+
+.red:active {
+    color: red;
+}
+
+.red:active:before {
+    background-color: red;
+}
+
+.red {
+    border-radius: 4px;
+    width: 120px;
+    height: 45px;
+    color: white;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+    box-shadow: 0px 0px 1px #d9534f;
+    background-color: #d9534f;
+    border: 1px solid transparent;
+}
+
+.red:hover {
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+    box-shadow: 0px 0px 10px #DA3725;
+    background-color: #DA3725;
+}
