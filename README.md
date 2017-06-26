@@ -1,1 +1,1 @@
-# fuze.js
+# fuze.css
