@@ -9,21 +9,39 @@
  * fuze.css Copyright Aiden Bai 2017.
  */
 
-.btn-rb {
-    animation: hue-rotate 10s linear infinite;
-}
+.rainbow { 
+  height: 100%;
+  width: 100%;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+background-size: 1800% 1800%;
 
-@keyframes hue-rotate {
-    from {
-        -webkit-filter: hue-rotate(0);
-        -moz-filter: hue-rotate(0);
-        -ms-filter: hue-rotate(0);
-        filter: hue-rotate(0);
-    }
-    to {
-        -webkit-filter: hue-rotate(360deg);
-        -moz-filter: hue-rotate(360deg);
-        -ms-filter: hue-rotate(360deg);
-        filter: hue-rotate(360deg);
-    }
+-webkit-animation: rainbow 18s ease infinite;
+-z-animation: rainbow 18s ease infinite;
+-o-animation: rainbow 18s ease infinite;
+  animation: rainbow 18s ease infinite;}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
 }
