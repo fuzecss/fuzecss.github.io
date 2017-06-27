@@ -9,87 +9,26 @@
  * fuze.css Copyright Aiden Bai 2017.
  */
 
-@import "nib"
+a {
+	-webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	display: block;
+	margin: 20px auto;
+	max-width: 180px;
+	text-decoration: none;
+	border-radius: 4px;
+	padding: 20px 30px;
+}
 
-gSize = 62px
-svgPath = "http://wp-se7ensky-blog.static.se7enapp.com/assets/i/gears.svg"
+.btn.fuze {
+	color: rgba(30, 22, 54, 0.6);
+	box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+}
 
-body
-  background #555
-
-.gearbox
-  fixed top 50% left 50%
-  width 226px
-  height 136px
-  margin-top (@height / (-2))
-  margin-left (@width / (-2))
-[class^="gear_"]
-  width gSize
-  height @width
-  position absolute
-  background-image url(svgPath)
-  background-size gSize (gSize * 10)
-  background-repeat no-repeat
-  background-position 0 0
-.gear
-  &_1
-    top -5px
-    left 29px
-    background-position 0 0
-    animation gearB 3s infinite linear
-  &_2
-    top 38px
-    left -1px
-    background-position 0 (gSize * (-1))
-    animation gearA 3s infinite linear
-  &_3
-    top 85px
-    left 9px
-    background-position 0 (gSize * (-8))
-    animation gearB 2.625s infinite linear
-  &_4
-    top 4px
-    left 110px
-    background-position 0 (gSize * (-3))
-    animation gearA 2.62s infinite linear
-  &_5
-    top 15px
-    left 67px
-    background-position 0 (gSize * (-4))
-    animation gearA 2.62s infinite linear
-  &_6
-    top 63px
-    left 75px
-    background-position 0 (gSize * (-5))
-    animation gearB 4.49s infinite linear
-  &_7
-    top 25px
-    left 171px
-    background-position 0 (gSize * (-6))
-    animation gearA 2.99s infinite linear
-  &_8
-    top 75px
-    left 158px
-    background-position 0 (gSize * (-7))
-    animation gearB 4.49s infinite linear
-  &_9
-    top 44px
-    left 120px
-    background-position 0 (gSize * (-8))
-    animation gearA 2.62s infinite linear
-  &_10
-    top -2px
-    left 141px
-    background-position 0 (gSize * (-9))
-    animation gearB 2.62s infinite linear
-
-@keyframes gearA
-  0%
-    transform rotate(0)
-  100%
-    transform rotate(360deg)
-@keyframes gearB
-  0%
-    transform rotate(0)
-  100%
-    transform rotate(-360deg)
+.btn.fuze:hover {
+	color: rgba(255, 255, 255, 0.85);
+	box-shadow: rgba(30, 22, 54, 0.7) 0 80px 0px 2px inset;
+}
