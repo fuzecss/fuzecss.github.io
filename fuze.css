@@ -9,14 +9,25 @@
  * fuze.css Copyright Aiden Bai 2017.
  */
 
-.w3-opacity,
-.w3-hover-opacity:hover {
-    opacity: 0.60;
-    -webkit-backface-visibility: hidden
+.btn-1 {
+  margin: .4em;
+  padding: 1em;
+  cursor: pointer;
+  background: #ececec;
+  text-decoration: none;
+  color: #666;
 }
 
-.w3-opacity-off,
-.w3-hover-opacity-off:hover {
-    opacity: 1;
-    -webkit-backface-visibility: hidden
+
+.glow {
+  display: inline-block;
+  transition-duration: 0.3s;
+  transition-property: box-shadow;
+  -webkit-tap-highlight-color: transparent;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
 }
+.glow:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
