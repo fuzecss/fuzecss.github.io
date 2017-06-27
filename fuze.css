@@ -9,7 +9,7 @@
  * fuze.css Copyright Aiden Bai 2017.
  */
 
-btn-f {
+.btn-f {
 	-webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
 	-moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
 	-ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
