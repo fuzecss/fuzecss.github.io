@@ -9,31 +9,50 @@
  * fuze.css Copyright Aiden Bai 2017.
  */
 
-.red:active {
-    color: white;
+.btn-1 {
+  background: darken($red, 1.5%);
+  font-weight: 100;
+  
+  svg {
+    height: 45px;
+    left: 0;
+    position: absolute;
+    top: 0; 
+    width: 100%; 
+  }
+  
+  rect {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-dasharray: 422, 0;
+  }
 }
 
-.red:active:before {
-    background-color: red;
+.btn-1:hover {
+  background: rgba($red, 0);
+  font-weight: 900;
+  letter-spacing: 1px;
+  
+  rect {
+    stroke-width: 5;
+    stroke-dasharray: 15, 310;
+    stroke-dashoffset: 48;
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  }
 }
 
-.red {
-    border-radius: 4px;
-    width: 120px;
-    height: 40px;
-    color: white;
-    -webkit-transition: all .3s linear;
-    transition: all .3s linear;
-    box-shadow: 0px 0px 1px #DB4332;
-    background-color: #DB4332;
-    border: 1px solid transparent;
-    font-family: "Verdana";
-    font-weight: bold;
-}
-
-.red:hover {
-    -webkit-transition: all .3s linear;
-    transition: all .3s linear;
-    box-shadow: 0px 0px 10px #D32F1D;
-    background-color: #D32F1D;
-}
+.btn {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size:16px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 0 auto 2em;
+  max-width: 160px; 
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 100%; 
