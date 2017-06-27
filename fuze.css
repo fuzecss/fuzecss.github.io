@@ -9,7 +9,7 @@
  * fuze.css Copyright Aiden Bai 2017.
  */
 
-a {
+btn-f {
 	-webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
 	-moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
 	-ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
@@ -23,12 +23,12 @@ a {
 	padding: 20px 30px;
 }
 
-.btn.fuze {
+.btn-f.fuze {
 	color: rgba(30, 22, 54, 0.6);
 	box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
 }
 
-.btn.fuze:hover {
+.btn-f.fuze:hover {
 	color: rgba(255, 255, 255, 0.85);
 	box-shadow: rgba(30, 22, 54, 0.7) 0 80px 0px 2px inset;
 }
