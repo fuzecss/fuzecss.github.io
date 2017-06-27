@@ -9,81 +9,50 @@
  * fuze.scss Copyright Aiden Bai 2017.
  */
 
-$col-primary: #00c7ec;
-$corner-radius: 5px;
-
-body {
-  background-color: #012839;
-  text-align: center;
-  padding-top: 50px;
-}
-
-.button {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: 'Exo 2', sans-serif;
-  font-weight: 300;
-  font-size: 30px;
-
-  display: inline-block;
+.btn {
   position: relative;
-  text-align: center;
-  color: $col-primary;
-  border: 1px solid $col-primary;
-  border-radius: $corner-radius;
-
-  line-height: 3em;
-  padding-left: 5em;
-  padding-right: 5em;
-
-  box-shadow: 0 0 0 0 transparent;
-
-  @include transition(all 0.2s ease-in);
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 25px;
+  overflow:hidden;
+  font-family: Arial, sans-serif;
+  font-weight: 300;
+  transition: all 250ms ease-in-out;
+  
+  span {
+    position: relative;
+    z-index: 1;
+  }
+    
+   &:before {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    margin-left: -100px;
+    margin-top: -100px;
+    content: '';
+    border-color: #fff;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 100px;
+    transform-origin: center center;
+    transition: all 250ms ease-in-out;
+    box-sizing: border-box;
+  }
 
   &:hover {
-    color: white;
-    box-shadow: 0 0 30px 0 transparentize($col-primary, 0.5);
-    background-color: $col-primary;
-
-    @include transition(all 0.2s ease-out);
+    color: #a6cfe3;
 
     &:before {
-      @include animation(shine 0.5s 0s linear);
+      border-width: 100px;
     }
-  }
-
-  &:active {
-    box-shadow: 0 0 0 0 transparent;
-    @include transition(box-shadow 0.2s ease-in);
-  }
-
-  &:before {
-    content: '';
-    display: block;
-    width: 0px;
-    height: 86%;
-    position: absolute;
-    top: 7%;
-    left: 0%;
-
-    opacity: 0;
-    background: white;
-    box-shadow: 0 0 15px 3px white;
-    @include transform(skewX(-20deg));
-  }
-}
-
-@include keyframes(shine) {
-  from {
-    opacity: 0;
-    left: 0%;
-  }
-
-  50% {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    left: 100%;
   }
 }
