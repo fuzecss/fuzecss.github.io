@@ -9,50 +9,87 @@
  * fuze.css Copyright Aiden Bai 2017.
  */
 
-.btn-1 {
-  background: darken($red, 1.5%);
-  font-weight: 100;
-  
-  svg {
-    height: 45px;
-    left: 0;
-    position: absolute;
-    top: 0; 
-    width: 100%; 
-  }
-  
-  rect {
-    fill: none;
-    stroke: #fff;
-    stroke-width: 2;
-    stroke-dasharray: 422, 0;
-  }
-}
+@import "nib"
 
-.btn-1:hover {
-  background: rgba($red, 0);
-  font-weight: 900;
-  letter-spacing: 1px;
-  
-  rect {
-    stroke-width: 5;
-    stroke-dasharray: 15, 310;
-    stroke-dashoffset: 48;
-    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
-  }
-}
+gSize = 62px
+svgPath = "http://wp-se7ensky-blog.static.se7enapp.com/assets/i/gears.svg"
 
-.btn {
-  color: #fff;
-  cursor: pointer;
-  display: block;
-  font-size:16px;
-  font-weight: 400;
-  line-height: 45px;
-  margin: 0 auto 2em;
-  max-width: 160px; 
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-  vertical-align: middle;
-  width: 100%; 
+body
+  background #555
+
+.gearbox
+  fixed top 50% left 50%
+  width 226px
+  height 136px
+  margin-top (@height / (-2))
+  margin-left (@width / (-2))
+[class^="gear_"]
+  width gSize
+  height @width
+  position absolute
+  background-image url(svgPath)
+  background-size gSize (gSize * 10)
+  background-repeat no-repeat
+  background-position 0 0
+.gear
+  &_1
+    top -5px
+    left 29px
+    background-position 0 0
+    animation gearB 3s infinite linear
+  &_2
+    top 38px
+    left -1px
+    background-position 0 (gSize * (-1))
+    animation gearA 3s infinite linear
+  &_3
+    top 85px
+    left 9px
+    background-position 0 (gSize * (-8))
+    animation gearB 2.625s infinite linear
+  &_4
+    top 4px
+    left 110px
+    background-position 0 (gSize * (-3))
+    animation gearA 2.62s infinite linear
+  &_5
+    top 15px
+    left 67px
+    background-position 0 (gSize * (-4))
+    animation gearA 2.62s infinite linear
+  &_6
+    top 63px
+    left 75px
+    background-position 0 (gSize * (-5))
+    animation gearB 4.49s infinite linear
+  &_7
+    top 25px
+    left 171px
+    background-position 0 (gSize * (-6))
+    animation gearA 2.99s infinite linear
+  &_8
+    top 75px
+    left 158px
+    background-position 0 (gSize * (-7))
+    animation gearB 4.49s infinite linear
+  &_9
+    top 44px
+    left 120px
+    background-position 0 (gSize * (-8))
+    animation gearA 2.62s infinite linear
+  &_10
+    top -2px
+    left 141px
+    background-position 0 (gSize * (-9))
+    animation gearB 2.62s infinite linear
+
+@keyframes gearA
+  0%
+    transform rotate(0)
+  100%
+    transform rotate(360deg)
+@keyframes gearB
+  0%
+    transform rotate(0)
+  100%
+    transform rotate(-360deg)
