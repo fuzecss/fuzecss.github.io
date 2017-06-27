@@ -9,4 +9,8 @@
  * fuze.css Copyright Aiden Bai 2017.
  */
 
+.ion-arrow-down {
+	content: "\f103"
+}
+
 @keyframes down-arrow-float {0% {bottom: 5px;}50% {bottom: 10px;}100% {bottom: 5px;}}
