@@ -9,8 +9,8 @@
  * fuze.css Copyright Aiden Bai 2017.
  */
 
-.ion-arrow-down {
-	content: "\f103"
+.w3-opacity,
+.w3-hover-opacity:hover {
+    opacity: 0.60;
+    -webkit-backface-visibility: hidden
 }
-
-@keyframes down-arrow-float {0% {bottom: 5px;}50% {bottom: 10px;}100% {bottom: 5px;}}
